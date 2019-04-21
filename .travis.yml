@@ -21,11 +21,11 @@ before_install:
   - conda update --yes conda
   - conda create --yes -n test python=$TRAVIS_PYTHON_VERSION
   - source activate test
-  - conda install --yes numpy matplotlib pip
+  #- conda install --yes numpy matplotlib pip
 
 
 install:
-  - conda install -c conda-forge paraview
+  - conda install --yes -c conda-forge paraview
   
 script:
   - paraview -h
